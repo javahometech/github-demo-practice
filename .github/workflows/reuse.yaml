@@ -1,0 +1,13 @@
+name: Reusable workflow
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        type: string
+        description: Enter your name
+jobs:
+  print_name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greeting
+        run: "Hello ${{input.name}}, Welcome!"
