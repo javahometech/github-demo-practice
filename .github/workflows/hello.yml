@@ -5,3 +5,5 @@ jobs:
     uses: ./.github/workflows/reuse.yaml
     with:
       name: Java Home
+    secrets:
+      name: Hari
