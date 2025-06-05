@@ -5,9 +5,12 @@ on:
       name:
         type: string
         description: Enter your name
+    secrets:
+      name:
+        required: true
 jobs:
   print_name:
     runs-on: ubuntu-latest
     steps:
       - name: Greeting
-        run: echo "Hello ${{inputs.name}}, Welcome!"
+        run: echo "Hello ${{inputs.name}}, Welcome! Your password is ${{secrets.name}}"
