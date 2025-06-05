@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Greeting
-        run: "Hello ${{inputs.name}}, Welcome!"
+        run: echo "Hello ${{inputs.name}}, Welcome!"
