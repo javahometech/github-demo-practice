@@ -10,4 +10,4 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Print Name
-          run: echo "Hello ${{github.events.inputs.name}} Welcome! "
+          run: echo "Hello ${{github.event.inputs.name}} Welcome! "
