@@ -1,0 +1,13 @@
+name: Workflow with parameters
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        type: string
+        description: Enter the name
+jobs:
+    demo:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Print Name
+          run: echo "Hello ${{github.events.inputs.name}} Welcome! "
