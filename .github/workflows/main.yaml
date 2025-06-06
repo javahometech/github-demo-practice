@@ -1,13 +1,13 @@
-name: Workflow with parameters
+name: Workflow with env
 on:
   workflow_dispatch:
-    inputs:
-      name:
-        type: string
-        description: Enter the name
+env:
+  MY_NAME: "Java Home"
 jobs:
     demo:
       runs-on: ubuntu-latest
+      env:
+        MY_NAME: "JHC"
       steps:
         - name: Print Name
-          run: echo "Hello ${{github.event.inputs.name}} Welcome! "
+          run: echo "Hello $MY_NAME Welcome! "
