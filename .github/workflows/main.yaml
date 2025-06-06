@@ -10,4 +10,4 @@ jobs:
         MY_NAME_JOB: "JHC"
       steps:
         - name: Print Name
-          run: echo "Hello $MY_NAME Welcome! "
+          run: echo "Hello $GITHUB_ACTOR_ID Welcome! "
