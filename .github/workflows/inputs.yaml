@@ -2,6 +2,11 @@ name: Inputs Demo
 on:
   workflow_dispatch:
     inputs:
+      branch:
+        required: true
+        type: string
+        description: Choose the branch to deploy
+        default: "develop"
       appEnv:
         description: Choose the environment to deploy
         required: true
@@ -15,4 +20,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy App
-        run: echo "App getting deployed on ${{inputs.appEnv}}"
+        run: echo "App getting deployed on ${{inputs.appEnv}} using branch ${{inputs.branch}}"
