@@ -1,0 +1,9 @@
+name: Conditions Workflow
+on: [push]
+jobs:
+  conditions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run in a condition
+        if: github.actor == 'javahometech'
+        run: echo This runs in a condition
