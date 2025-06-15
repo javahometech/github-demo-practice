@@ -6,3 +6,5 @@ jobs:
     steps:
       - name: Display actor and ref
         run: echo "This job is triggered by ${{github.actor}} on branch ${{github.ref_name}}"
+      - name: Print Github Context
+        run: echo "${{toJson(github)}}"
