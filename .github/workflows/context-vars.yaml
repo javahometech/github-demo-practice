@@ -8,3 +8,7 @@ jobs:
         run: echo "This job is triggered by ${{github.actor}} on branch ${{github.ref_name}}"
       - name: Print Github Context
         run: echo "${{toJson(github)}}"
+      - name: Get short SHA
+        id: short_sha
+        run: echo "SHA ${GITHUB_SHA::7}"
+
