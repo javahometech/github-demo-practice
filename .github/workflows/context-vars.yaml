@@ -11,4 +11,6 @@ jobs:
       - name: Get short SHA
         id: short_sha
         run: echo "SHA ${GITHUB_SHA::7}"
+      - name: Print all environment variables
+        run: printenv
 
