@@ -1,7 +1,8 @@
 name: Conditions Workflow
 on: [push]
 jobs:
-  conditions:
+  build:
+    if: github.ref_name != 'main'
     runs-on: ubuntu-latest
     steps:
       - name: Run in a condition
