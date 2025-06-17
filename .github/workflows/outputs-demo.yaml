@@ -10,5 +10,5 @@ jobs:
       - name: Step Two
         run: |
           echo "The output of step1 is ${{ steps.step1.outputs.version }}"
-          echo $GITHUB_OUTPUT
+          cat $GITHUB_OUTPUT
     
