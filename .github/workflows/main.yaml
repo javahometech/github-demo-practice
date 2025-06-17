@@ -10,4 +10,4 @@ jobs:
         MY_NAME_JOB: "JHC"
       steps:
         - name: Print Name
-          run: echo "Hello ${{github}} Welcome! "
+          run: echo "${{ env.GITHUB_SHA }} "
