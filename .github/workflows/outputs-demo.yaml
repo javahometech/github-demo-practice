@@ -8,5 +8,5 @@ jobs:
         id: mystep
         run: echo "app_version=1.2.3 >> $GITHUB_OUTPUT"
       - name: Print Output
-        run: echo "${{ steps.mystep.output.app_version }}"
+        run: echo "${{ steps.mystep.outputs.app_version }}"
     
