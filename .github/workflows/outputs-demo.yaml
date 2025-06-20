@@ -7,6 +7,7 @@ jobs:
       output1: "${{ steps.step1.outputs.name }}"
     steps:
       - name: step1
+        id: step1
         run: echo "name=Java Home Cloud" >> $GITHUB_OUTPUT
   job2:
     runs-on: ubuntu-latest
