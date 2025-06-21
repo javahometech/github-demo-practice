@@ -1,0 +1,10 @@
+name: This is if demo
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome step
+        if: github.ref == 'refs/heads/main'
+        run: echo Welcome to this step
+      
