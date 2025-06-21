@@ -4,9 +4,7 @@ jobs:
   composite-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
       - name: Call composite Action
-        uses: ./.github/actions/say-hello
+        uses: javahometech/gha-ca-practice
         with:
           name: "Hari kammana"
