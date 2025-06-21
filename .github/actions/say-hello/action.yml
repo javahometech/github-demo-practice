@@ -1,0 +1,14 @@
+name: Say hello Action
+description: A simple GitHub Action.
+inputs:
+  name:
+    description: 'Name to greet'
+    required: true
+    default: 'Java Home'
+runs:
+  using: 'composite'
+  steps:
+    - name: Say hello
+      run: echo "Hello ${{ inputs.name }}!"
+    - name: Print environment variables
+      run: echo "The name is ${{ inputs.name}}"
