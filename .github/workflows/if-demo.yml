@@ -4,10 +4,10 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Welcome step
-        # if: github.ref == 'refs/heads/main'
-        run: hari Welcome to this step
-      - name: Welcome step2
-        if: always()
-        run: echo "Welcome to step2"
+      - name: Step One
+        id: step1
+        run: echo "version=0.0.1" >> $GITHUB_OUTPUT
+      - name: Step Two
+        if: ${{ steps.step1.outputs.version == '0.0.1' }}
+        run: echo "Welcome to Step Two"
       
