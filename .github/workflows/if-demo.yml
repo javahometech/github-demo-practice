@@ -7,7 +7,7 @@ jobs:
       - name: Welcome step
         # if: github.ref == 'refs/heads/main'
         run: hari Welcome to this step
-      - name: Welcome step
-        # if: github.ref_name == 'main'
+      - name: Welcome step2
+        if: always()
         run: echo "Welcome to step2"
       
