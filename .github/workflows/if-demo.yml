@@ -8,6 +8,6 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: echo Welcome to this step
       - name: Welcome step
-        if: github.ref_name = 'main'
+        if: github.ref_name == 'main'
         run: echo "Welcome to step2"
       
