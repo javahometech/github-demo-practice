@@ -1,13 +1,15 @@
 name: This is if demo
 on: push
 jobs:
-  job1:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Step One
-        id: step1
-        run: echo "version=0.0.1" >> $GITHUB_OUTPUT
-      - name: Step Two
-        if: ${{ steps.step1.outputs.version == '0.0.1' }} && success()
-        run: echo "Welcome to Step Two"
+      - name: Build Step
+        run: echo "Running build task"
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref_name == 'main' }}
+    steps:
+      - name: Deploy step
+        run: echo "Deploying the app"
       
