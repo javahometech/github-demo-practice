@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call composite Action
-        uses: javahometech/gha-ca-practice
+        uses: javahometech/gha-ca-practice@main
         with:
           name: "Hari kammana"
