@@ -10,6 +10,4 @@ runs:
   steps:
     - name: Say hello
       run: echo "Hello ${{ inputs.name }}!"
-    - name: Print environment variables
-      run: echo "The name is ${{ inputs.name}}"
       shell: bash
