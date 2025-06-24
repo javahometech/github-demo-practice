@@ -5,11 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Step
-        run: echo "Running build task"
-  deploy:
-    runs-on: ubuntu-latest
-    if: "${{ github.ref_name == 'develop' }}"
-    steps:
-      - name: Deploy step
-        run: echo "Deploying the app"
+        run: |
+          echo "Running build task"
+          echo github.event
       
