@@ -7,5 +7,5 @@ jobs:
       - name: Build Step
         run: |
           echo "Running build task"
-          echo ${{ toJson(github.event) }}
+          echo "${{ toJson(github.event) }}"
       
