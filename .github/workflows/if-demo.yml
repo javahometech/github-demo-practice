@@ -1,11 +1,17 @@
-name: This is if demo
-on: push
+name: This is a demo
+on:
+  push:
+    branches:
+      - main
+  pull_request:
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Build Step
+        if: github.event.pull_request.base.ref == 'main'
         run: |
           echo "Running build task"
-          echo "${{ toJson(github.event_name) }}"
+          echo "${{ github.event.pull_request.base.ref }}"
+          echo "${{ github.event.pull_request.head.ref }}"
       
