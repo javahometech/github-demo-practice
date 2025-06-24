@@ -1,5 +1,9 @@
 name: This is a demo
-on: [push,pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
 jobs:
   build:
     runs-on: ubuntu-latest
