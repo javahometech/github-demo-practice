@@ -1,5 +1,5 @@
-name: This is if demo
-on: push
+name: This is a demo
+on: [push,pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -7,5 +7,6 @@ jobs:
       - name: Build Step
         run: |
           echo "Running build task"
-          echo "${{ toJson(github.event_name) }}"
+          echo "${{ github.event.pull_request.base.ref }}"
+          echo "${{ github.event.pull_request.head.ref }}"
       
