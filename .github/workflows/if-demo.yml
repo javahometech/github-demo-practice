@@ -1,5 +1,5 @@
 name: This is if demo
-on: workflow_dispatch
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
