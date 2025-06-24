@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Step
+        if: github.event.pull_request.base.ref == 'main'
         run: |
           echo "Running build task"
           echo "${{ github.event.pull_request.base.ref }}"
