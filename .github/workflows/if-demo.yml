@@ -1,9 +1,5 @@
 name: This is a demo
-on:
-  push:
-    branches:
-      - main
-  pull_request:
+on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
