@@ -9,7 +9,7 @@ jobs:
         run: |
           echo "Checking code quality..."
           exit 1
-  edev_deploy:
+  dev_deploy:
     runs-on: ubuntu-latest
     needs: quality_check
     steps:
@@ -17,6 +17,7 @@ jobs:
         run: echo "Deploying to dev..."
 
   failure_email:
+    needs: dev_deploy
     runs-on: ubuntu-latest
     if: failure()
     steps:
