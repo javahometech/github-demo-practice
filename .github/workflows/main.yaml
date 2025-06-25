@@ -24,7 +24,7 @@ jobs:
     # if: success()
     steps:
       - name: send failure alert
-        run: echo "Alerting team about success - ${{success()}}"
+        run: echo "Alerting team about success - ${{ success() }}"
 
   failure_email:
     needs: ['dev_deploy','quality_check']
