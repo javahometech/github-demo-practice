@@ -21,10 +21,10 @@ jobs:
   success_email:
     needs: ['dev_deploy','quality_check']
     runs-on: ubuntu-latest
-    if: success()
+    # if: success()
     steps:
       - name: send failure alert
-        run: echo "Alerting team about failure"
+        run: echo "Alerting team about success - ${{success()}}"
 
   failure_email:
     needs: ['dev_deploy','quality_check']
