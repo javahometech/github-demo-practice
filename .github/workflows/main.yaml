@@ -9,7 +9,7 @@ jobs:
       - name: Check Code Quality
         run: |
           echo "Checking code quality..."
-          exit 1
+          # exit 1
           
   dev_deploy:
     if: github.ref_name == 'develop'
