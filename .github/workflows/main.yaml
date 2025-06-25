@@ -23,8 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     if: always()
     steps:
-      - name: send failure alert
-        run: echo " dev_deploy Result - ${{ needs.dev_deploy.result }}"
+      - name: send success alert
+        run: echo " quality_check Result - ${{ needs.quality_check.result }}"
 
   failure_email:
     needs: ['dev_deploy','quality_check']
