@@ -24,4 +24,12 @@ jobs:
     steps:
       - name: send failure alert
         run: echo "Alerting team about failure"
+
+  failure_email:
+    needs: ['dev_deploy','quality_check']
+    runs-on: ubuntu-latest
+    if: failure()
+    steps:
+      - name: send failure alert
+        run: echo "Alerting team about failure"
     
