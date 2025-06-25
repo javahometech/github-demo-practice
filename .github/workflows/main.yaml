@@ -20,7 +20,7 @@ jobs:
   success_email:
     needs: ['dev_deploy','quality_check']
     runs-on: ubuntu-latest
-    if: success()
+    if: always() && !failure()
     steps:
       - name: send failure alert
         run: echo "Alerting team about failure"
