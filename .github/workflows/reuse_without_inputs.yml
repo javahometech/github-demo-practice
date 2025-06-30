@@ -1,0 +1,8 @@
+name: Reuse This workflow
+on: workflow_call
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome Step
+        run: echo "Welcome to reuasble to workflow"
