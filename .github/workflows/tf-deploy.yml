@@ -1,5 +1,5 @@
 name: TF Deploy
-on: push
+on: workflow_dispatch
 jobs:
   tf-deploy:
     runs-on: ubuntu-latest
