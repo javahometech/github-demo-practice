@@ -3,3 +3,5 @@ on: push
 jobs:
   hello-job:
     uses: ./.github/workflows/reuse_without_inputs.yml
+    with:
+      name: "Hari Kammana"
