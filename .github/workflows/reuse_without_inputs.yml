@@ -5,9 +5,12 @@ on:
       name:
         required: true
         type: string
+    secrets:
+      MY_SECRET:
+        required: true
 jobs:
   welcome:
     runs-on: ubuntu-latest
     steps:
       - name: Welcome Step
-        run: echo "Hello, ${{ inputs.name }} Welcome to reusable workflow"
+        run: echo "Hello, ${{ inputs.name }} the secret is ${{ secrets.MY_SECRET }} to reusable workflow"
