@@ -2,4 +2,4 @@ name: Call Without Inputs Workflow
 on: push
 jobs:
   hello-job:
-    uses: .github/workflows/reuse_without_inputs.yml@main
+    uses: ./.github/workflows/reuse_without_inputs.yml
